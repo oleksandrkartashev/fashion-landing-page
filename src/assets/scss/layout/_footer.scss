@@ -1,0 +1,131 @@
+.footer {
+    padding: 30px 0;
+    font-family: var(--footer-font-family);
+    background: var(--primary-dark-color);
+
+    @include respond-to("lg") {
+        padding: 50px 0;
+    }
+
+    @include respond-to("xlg") {
+        padding: 119px 0;
+    }
+
+    &--wrap {
+        @include respond-to("lg") {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    &-info {
+        margin-bottom: 20px;
+
+        @include respond-to("lg") {
+            max-width: 25%;
+            margin-bottom: 0;
+        }
+    }
+
+    &-title {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--primary-white-color);
+        font-weight: 900;
+        font-size: 18px;
+        font-family: var(--footer-logo-font);
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include respond-to("lg") {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        @include respond-to("xlg") {
+            margin-bottom: 22px;
+            font-size: 40px;
+            letter-spacing: 1.2px;
+        }
+    }
+
+    &-description {
+        margin-bottom: 10px;
+        color: var(--footer-description-color);
+        font-weight: 400;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 1.67;
+
+        @include respond-to("lg") {
+            margin-bottom: 20px;
+        }
+
+        @include respond-to("xlg") {
+            margin-bottom: 32px;
+            font-size: 24px;
+            letter-spacing: 0.48px;
+        }
+    }
+
+    &-nav {
+        display: block;
+        padding: 0;
+
+        @include respond-to("lg") {
+            display: flex;
+            flex: auto;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 63%;
+        }
+
+        @include respond-to("xxlg") {
+            max-width: 53%;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-self: start;
+            margin-bottom: 10px;
+
+            @include respond-to("lg") {
+                margin-bottom: 0;
+            }
+        }
+
+        .nav-item {
+            margin: 0;
+            color: var(--primary-white-color);
+            font-size: 16px;
+
+            @include respond-to("xlg") {
+                font-size: 24px;
+                letter-spacing: 0.48px;
+            }
+
+            &:has(a) {
+                color: var(--footer-nav-link-color);
+
+                &:hover, &:focus {
+                    color: var(--footer-nav-link-color);
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+
+                @include respond-to("lg") {
+                    margin-bottom: 20px;
+                }
+
+                @include respond-to("xlg") {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.header {
+    position: relative;
+    background: transparent;
+
+    &--wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 15px;
+
+        @include respond-to("md") {
+            padding: 25px 0 30px;
+        }
+
+        @include respond-to("lg") {
+            padding: 45px 0 56px;
+        }
+    }
+
+    &-logo {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-start;
+        order: 1;
+        color: transparent;
+        color: var(--secondary-color);
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            color: transparent;
+        }
+
+        span {
+            display: block;
+        }
+
+        &--text {
+            color: var(--primary-dark-color);   
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 0.1px;
+            text-transform: uppercase;
+
+            @include respond-to("md") {
+                font-size: 22px;
+                letter-spacing: 0.5px;
+            }
+
+            @include respond-to("lg") {
+                font-size: 40px;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        &--icon {
+            margin-right: 3px;
+
+            @include respond-to("md") {
+                margin-right: 10px;
+            }
+        }
+
+        @include respond-to("md") {
+            flex: 0;
+            justify-content: auto;
+            order: 0;
+            margin-right: 10px;
+            font-size: 22px;
+        }
+    }
+
+    &-login {
+        order: 2;
+
+        @include respond-to("md") {
+            order: 0;
+        }
+    }
+}

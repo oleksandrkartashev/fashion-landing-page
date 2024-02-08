@@ -1,0 +1,106 @@
+.nav {
+    display: flex;
+    align-items: center;
+    order: 3;
+    padding: 0 10px;
+
+    @include respond-to("md") {
+        flex: 1;
+        justify-content: flex-end;
+        order: 0;
+        padding: 0 20px 0 0;
+    }
+
+    @include respond-to("lg") {
+        padding: 0 54px 0 0;
+    }
+
+    &-list {
+        position: absolute;
+        top: 66px;
+        left: 0;
+        z-index: 99;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0 15px;
+        list-style: none;
+        background: var(--primary-white-color);
+
+        &--active {
+            display: block;
+        }
+
+        @include respond-to("md") {
+            position: static;
+            top: auto;
+            left: auto;
+            z-index: auto;
+            display: flex;
+            flex-flow: row nowrap;
+            width: auto;
+            height: auto;
+            padding: 0;
+            background: transparent;
+        }
+    }
+
+    &-item {
+        padding: 0 0 8px;
+
+        @include respond-to("md") {
+            padding: 0;
+            border: none;
+        }
+
+        &:not(:last-child) {
+            margin: 0 0 8px;
+            border-bottom: 1px solid var(--base-border-color);
+
+            @include respond-to("md") {
+                margin: 0 15px 0 0;
+            }
+
+            @include respond-to("lg") {
+                margin: 0 33px 0 0;
+            }
+
+            @include respond-to("xxlg") {
+                margin: 0 66px 0 0;
+            }
+        }
+    }
+
+    &-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        color: var(--thirdary-color);
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.22px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--thirdary-color);
+        }
+
+        @include respond-to("md") {
+            display: inline-block;
+            width: auto;
+        }
+
+        @include respond-to("lg") {
+            font-size: 20px;
+            letter-spacing: 0.22px;
+        }
+
+        @include respond-to("xxlg") {
+            font-size: 22px;
+        }
+    }
+}

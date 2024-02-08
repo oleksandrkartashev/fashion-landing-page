@@ -1,0 +1,46 @@
+{
+  "name": "fashion-landing-page",
+  "version": "0.0.0",
+  "description": "Convert Figma landing design to HTML website",
+  "author": "Olexander Kartashev <oleksandrkartashev@gmail.com>",
+  "email": "oleksandrkartashev@gmail.com",
+  "scripts": {
+    "dev": "webpack serve --hot --mode development",
+    "format_scripts": "prettier --write \"src/*.js\"",
+    "format_styles": "prettier --write \"src/*/*/*.scss\"",
+    "format": "run-p format_scripts format_styles",
+    "build": "webpack --mode production",
+    "lint": "eslint src --ext .js",
+    "stylelint": "stylelint '**/*.scss' --fix"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.16",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.4",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.0",
+    "stylelint-scss": "^6.1.0",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "babel-loader": "^8.2.3",
+    "npm-run-all": "^4.1.5"
+  }
+}
