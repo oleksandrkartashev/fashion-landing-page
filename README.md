@@ -5,6 +5,7 @@ This landing page template was crafted based on a Figma design found [here](http
 ## Table of Contents
 - [Demo](#demo)
 - [Usage](#usage)
+- [Commands](#commands)
 - [License](#license)
 
 ## Demo
@@ -30,7 +31,7 @@ To use the Fashion Landing Page template, follow these steps:
 
 4. Access the landing page through your web browser to ensure everything looks as expected.
 
-## Tasks
+## Commands
 
 ```bash
 

@@ -107,14 +107,6 @@
                 letter-spacing: 0.48px;
             }
 
-            &:has(a) {
-                color: var(--footer-nav-link-color);
-
-                &:hover, &:focus {
-                    color: var(--footer-nav-link-color);
-                }
-            }
-
             &:not(:last-child) {
                 margin-bottom: 10px;
 
@@ -125,6 +117,13 @@
                 @include respond-to("xlg") {
                     margin-bottom: 32px;
                 }
+            }
+        }
+        .nav-item a {
+            color: var(--footer-nav-link-color);
+
+            &:hover, &:focus {
+                color: var(--footer-nav-link-color);
             }
         }
     }
